@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://niamatos.com/sitemap.xml
