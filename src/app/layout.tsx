@@ -4,7 +4,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 
 export const metadata = {
-    metadataBase: new URL("https://niamatos.com"),
+  metadataBase: new URL("https://niamatos.com"),
   title: "Nia Matos — Home-Style Dog Boarding & Daycare",
   description: "Cousin Haven by Nia Matos: home-style dog boarding, daycare & transport in Port St. Lucie, FL.",
   authors: [{ name: "Nia Matos" }],
