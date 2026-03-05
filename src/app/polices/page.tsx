@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Download, ArrowRight } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import cousinHavenLogo from "@/assets/cosuin-haven-logo-brown.png";
+import cousinHavenLogo from "@/assets/cousin-haven-logo-brown.png";
 
 const Policies = () => (
   <>
