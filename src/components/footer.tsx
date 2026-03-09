@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Instagram, Facebook } from "lucide-react";
-import niaMatosLogo from "@/assets/nia-matos-logo-brown.png";
+// Image import removed; use string path for public image
 import Image from "next/image";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
     <div className="container py-12">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="flex flex-col items-start gap-4">
-          <Image src={niaMatosLogo} alt="Nia Matos" className="h-16 w-auto " width={40} height={40} />
+          <img src="/images/nia-matos-logo-brown.png" alt="Nia Matos" className="h-16 w-auto " width={40} height={40} loading="lazy" decoding="async" style={{ color: 'transparent' }} />
           <p className="text-sm opacity-80 font-body">
             Cousin Haven by Nia Matos
           </p>
@@ -32,7 +32,7 @@ export default function Footer() {
             <Link href="/services" className="hover:opacity-100 transition-opacity">Services</Link>
             <Link href="/book" className="hover:opacity-100 transition-opacity">Book a Meet & Greet</Link>
             <Link href="/agreement" className="hover:opacity-100 transition-opacity">Client Agreement</Link>
-            <Link href="/policies" className="hover:opacity-100 transition-opacity">Policies</Link>
+            <Link href="/polices" className="hover:opacity-100 transition-opacity">Policies</Link>
           </div>
         </div>
 

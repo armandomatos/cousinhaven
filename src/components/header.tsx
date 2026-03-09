@@ -3,7 +3,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { NavLink } from "@/components/navlink";
 import { Menu, X } from "lucide-react";
-import niaMatosLogo from "@/assets/nia-matos-brown-transp.png";
+// Image import removed; use string path for public image
 import Image from "next/image";
 const navLinks = [
   { to: "/", label: "Home" },
@@ -20,12 +20,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
      <div className="container flex items-center justify-between py-3">
         <NavLink href="/" className="flex items-center gap-2">
-          <Image
-            src={niaMatosLogo}
+          <img
+            src="/images/nia-matos-brown-transp.png"
             alt="Nia Matos"
             width={40}
             height={40}
             className="h-16 w-auto"
+            loading="lazy"
+            decoding="async"
+            style={{ color: 'transparent' }}
           />
         </NavLink>
 

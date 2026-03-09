@@ -3,12 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import type { StaticImageData } from "next/image";
-import cousinHavenLogo from "@/assets/cousin-haven-logo-brown.png";
-import Boarding from "@/assets/boarding-trans.png";
-import Daycare from "@/assets/daycare-trans.png";
-import HalfDay from "@/assets/halfday-trans.png";
-import Transport from "@/assets/transport-trans.png";
-import BathBrush from "@/assets/bathbrush-trans.png"; // Placeholder image for add-on
+// Image imports removed; use string paths for public images
 
 
 const services = [
@@ -54,12 +49,12 @@ const services = [
   },
 ];
 
-const serviceImages: Record<string, StaticImageData> = {
-  Boarding,
-  Daycare,
-  "Half Day": HalfDay,
-  Transport,
-  "BathBrush": BathBrush, 
+const serviceImages: Record<string, string> = {
+  Boarding: "/images/boarding-trans.png",
+  Daycare: "/images/daycare-trans.png",
+  "Half Day": "/images/halfday-trans.png",
+  Transport: "/images/transport-trans.png",
+  BathBrush: "/images/bathbrush-trans.png",
 };
 
 const Services = () => (
@@ -68,19 +63,19 @@ const Services = () => (
     <section className="relative py-20 md:py-28 overflow-hidden">
       <div className="absolute inset-0 opacity-60">
                <video
-              src="videos/cousinyard.mp4"
+              src="/videos/cousinyard.mp4"
               autoPlay
               loop
               muted
               playsInline
               className="w-full h-full object-cover"
-
+              poster="/videos/cousinyard.mp4"
             >
               Sorry, your browser does not support embedded videos.
             </video>
       </div>
       <div className="relative container text-center">
-        <Image src={cousinHavenLogo} alt="Cousin Haven" className="h-12 mx-auto mb-6" width={81} height={40} />
+        <img src="/images/cousin-haven-logo-brown.png" alt="Cousin Haven" className="h-12 mx-auto mb-6" width={81} height={40} loading="lazy" decoding="async" style={{ color: 'transparent' }} />
         <h1 className="font-display text-4xl md:text-5xl mb-4">Cousin Haven Services</h1>
         <p className="font-body font-bold text-white max-w-lg mx-auto text-lg">
           Quality over quantity. Limited spots. Maximum love.
@@ -94,7 +89,7 @@ const Services = () => (
         {services.map((s, i) => (
           <div key={i} className={`rounded-2xl p-8 ${s.bg} border`}>
             <div className="flex flex-col md:flex-row md:items-start gap-6">
-              <Image src={serviceImages[s.subtitle]} alt={s.subtitle} className="service-img-mobile  mb-4 block md:h-20" />
+              <img src={serviceImages[s.subtitle]} alt={s.subtitle} className="service-img-mobile  mb-4 block md:h-20" loading="lazy" decoding="async" style={{ color: 'transparent' }} />
               <div className="flex-1">
                 <h2 className="font-subhead text-2xl mb-2">{s.title}</h2>
                 <p className="font-body text-muted-foreground mb-4">{s.desc}</p>

@@ -25,7 +25,7 @@ const Agreement = () => (
           Complete Client Agreement <ArrowRight size={18} />
         </a>
         <Link
-          href="/policies"
+          href="/polices"
           className="inline-flex items-center justify-center gap-2 font-subhead px-8 py-4 rounded-full border border-primary text-primary hover:bg-primary/5 transition-colors"
         >
           View Policies

@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Calendar, FileText, Shield, Clock, ArrowRight } from "lucide-react";
-import cousinHavenLogo from "@/assets/cousin-haven-logo-brown.png";
+// Image import removed; use string path for public image
 
 const Book = () => (
   <>
     <section className="py-20 md:py-28">
       <div className="container max-w-3xl">
         <div className="text-center mb-12">
-          <Image src={cousinHavenLogo} alt="Cousin Haven" className="h-10 mx-auto mb-4 opacity-70" height={40} width={68}  />
+          <img src="/images/cousin-haven-logo-brown.png" alt="Cousin Haven" className="h-10 mx-auto mb-4 opacity-70" height={40} width={68} loading="lazy" decoding="async" style={{ color: 'transparent' }}  />
           <h1 className="font-display text-4xl md:text-5xl mb-4">Book Your Visit</h1>
           <p className="font-body text-muted-foreground text-lg">
             Follow these steps to get started with Cousin Haven.
@@ -59,7 +59,7 @@ const Book = () => (
                     Sign Client Agreement
                   </Link>
                   <Link
-                    href="/policies"
+                    href="/polices"
                     className="inline-flex items-center gap-2 font-subhead text-sm px-5 py-2.5 rounded-full border border-primary text-primary hover:bg-primary/5 transition-colors"
                   >
                     Read Policies

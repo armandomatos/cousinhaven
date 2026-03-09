@@ -72,7 +72,7 @@ const Contact = () => (
         </Link>
         <div className="flex justify-center gap-4 font-body text-sm text-muted-foreground">
           <Link href="/agreement" className="hover:text-primary transition-colors">Agreement</Link>
-          <Link href="/policies" className="hover:text-primary transition-colors">Policies</Link>
+          <Link href="/polices" className="hover:text-primary transition-colors">Policies</Link>
         </div>
       </div>
     </div>

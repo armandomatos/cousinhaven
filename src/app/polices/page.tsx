@@ -2,14 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Download, ArrowRight } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import cousinHavenLogo from "@/assets/cousin-haven-logo-brown.png";
+// Image import removed; use string path for public image
 
 const Policies = () => (
   <>
     <section className="py-20 md:py-28">
       <div className="container max-w-3xl">
         <div className="text-center mb-12">
-          <Image src={cousinHavenLogo} alt="Cousin Haven" className="h-10 mx-auto mb-4 opacity-70" />
+          <img src="/images/cousin-haven-logo-brown.png" alt="Cousin Haven" className="h-10 mx-auto mb-4 opacity-70" loading="lazy" decoding="async" style={{ color: 'transparent' }} />
           <h1 className="font-display text-4xl md:text-5xl mb-4">Policies & Requirements</h1>
           <p className="font-body text-muted-foreground">
             Please review our policies before your first visit. Policies may be updated — the latest version will always be posted here.

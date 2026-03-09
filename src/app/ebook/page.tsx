@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, CheckCircle, ChefHat, Clock, Snowflake, Cookie, Flame } from "lucide-react";
-import ebookImg from "@/assets/ebook-preview.jpg";
+// Image import removed; use string path for public image
 
 const benefits = [
   "20 simple recipes using everyday ingredients",
@@ -80,10 +80,13 @@ const Ebook = () => (
           </div>
 
           <div className="flex justify-center">
-            <Image
-              src={ebookImg}
+            <img
+              src="/images/ebook-preview.jpg"
               alt="Ebook preview"
               className="rounded-2xl shadow-warm max-w-sm w-full"
+              loading="lazy"
+              decoding="async"
+              style={{ color: 'transparent' }}
             />
           </div>
         </div>

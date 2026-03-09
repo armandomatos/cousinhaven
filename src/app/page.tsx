@@ -22,12 +22,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import { Heart, Home, Shield, Star, ArrowRight } from "lucide-react";
-import dogsPlayingImg from "@/assets/cousinsinside.png";
-import cousinHavenLogo from "@/assets/cousin-haven-logo-brown.png";
-import Boarding from "@/assets/boarding.png";
-import Daycare from "@/assets/daycare.png";
-import HalfDay from "@/assets/halfday.png";
-import Transport from "@/assets/transport.png";
+// Image imports removed; use string paths for public images
 
 const services = [
   {
@@ -55,11 +50,11 @@ const services = [
     icon: "🚗",
   },
 ];
-const serviceImages: Record<string, StaticImageData> = {
-  Boarding,
-  Daycare,
-  "Half Day": HalfDay,
-  Transport,
+const serviceImages: Record<string, string> = {
+  Boarding: "/images/boarding.png",
+  Daycare: "/images/daycare.png",
+  "Half Day": "/images/halfday.png",
+  Transport: "/images/transport.png",
 };
 
 const steps = [
@@ -115,7 +110,7 @@ const Index = () => {
       <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground" aria-label="Hero">
           <div className="absolute inset-0 opacity-30">
             <video
-              src="videos/herovideo.mp4"      
+              src="/videos/herovideo.mp4"      
               autoPlay
               loop
               muted
@@ -177,7 +172,7 @@ const Index = () => {
       <section className="py-16 md:py-24" aria-label="Our Services">
         <div className="container">
           <div className="text-center mb-12">
-            <Image src={cousinHavenLogo} alt="Cousin Haven by Nia Matos logo" className="h-10 mx-auto mb-4 opacity-70" height={40} width={68} />
+            <img src="/images/cousin-haven-logo-brown.png" alt="Cousin Haven by Nia Matos logo" className="h-10 mx-auto mb-4 opacity-70" height={40} width={68} loading="lazy" decoding="async" style={{ color: 'transparent' }} />
             <h2 className="font-display text-3xl md:text-4xl mb-3">Our Services</h2>
             <p className="font-body text-muted-foreground max-w-md mx-auto">
               Everything your pup needs, all under one roof.
@@ -189,7 +184,7 @@ const Index = () => {
                 key={i}
                 className="group p-6 rounded-2xl bg-card border hover:shadow-warm transition-all duration-300 hover:-translate-y-1"
               >
-                <Image src={serviceImages[s.title]} alt={s.title + ' service icon'} className="mb-4 block h-16 service-img-mobile" height={64} width={64} />
+                <img src={serviceImages[s.title]} alt={s.title + ' service icon'} className="mb-4 block h-16 service-img-mobile" height={64} width={64} loading="lazy" decoding="async" style={{ color: 'transparent' }} />
                 <h3 className="px-8  inline-flex  rounded-full font-subhead bg-primary  text-lg text-gold mb-1">{s.title}</h3>
                 <p className=" font-body font-bold text-xs mb-2">{s.subtitle}</p>
                 <p className="font-body text-sm text-muted-foreground mb-4">{s.desc}</p>
@@ -254,7 +249,7 @@ const Index = () => {
 
       {/* Image Banner */}
       <section className="relative h-64 md:h-80 overflow-hidden" aria-label="Join the Family">
-        <Image src={dogsPlayingImg} alt="Happy dogs in a home" className="w-full h-full object-cover" fill priority />
+        <img src="/images/cousinsinside.png" alt="Happy dogs in a home" className="w-full h-full object-cover" style={{ objectFit: 'cover', width: '100%', height: '100%' }} loading="lazy" decoding="async" />
 
         <div className="absolute inset-0 bg-primary/60 flex items-center justify-center">
           <div className="text-center text-primary-foreground">
