@@ -1,28 +1,5 @@
-export const metadata = {
-  title: "Cousin Haven | Home-Style Dog Boarding & Daycare in Port St. Lucie, FL",
-  description: "Home-style dog boarding, daycare, and transport in Port St. Lucie, FL. Small groups, supervised play, and a real home for your dog. Book a meet & greet today!",
-  openGraph: {
-    title: "Cousin Haven | Home-Style Dog Boarding & Daycare in Port St. Lucie, FL",
-    description: "Home-style dog boarding, daycare, and transport in Port St. Lucie, FL. Small groups, supervised play, and a real home for your dog. Book a meet & greet today!",
-    url: "https://niamatos.com/",
-    type: "website",
-    images: [
-      {
-        url: "/assets/nia-matos-logo-brown.png",
-        width: 1200,
-        height: 630,
-        alt: "Cousin Haven by Nia Matos logo"
-      }
-    ],
-    locale: "en_US",
-    siteName: "Cousin Haven"
-  },
-};
 import Link from "next/link";
-import Image from "next/image";
-import { StaticImageData } from "next/image";
 import { Heart, Home, Shield, Star, ArrowRight } from "lucide-react";
-// Image imports removed; use string paths for public images
 
 const services = [
   {
@@ -56,14 +33,12 @@ const serviceImages: Record<string, string> = {
   "Half Day": "/images/halfday.png",
   Transport: "/images/transport.png",
 };
-
 const steps = [
   { num: "1", text: "Book a Meet & Greet" },
   { num: "2", text: "Sign Agreement & review Policies" },
   { num: "3", text: "Send vaccine records" },
   { num: "4", text: "Confirm your booking" },
 ];
-
 const testimonials = [
   {
     name: "Wendi B.",
@@ -79,7 +54,7 @@ const testimonials = [
   },
 ];
 
-const Index = () => {
+export default function Index() {
   return (
     <>
       {/* JSON-LD LocalBusiness structured data for SEO */}
@@ -108,19 +83,19 @@ const Index = () => {
       </script>
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground" aria-label="Hero">
-          <div className="absolute inset-0 opacity-30">
-            <video
-              src="/videos/herovideo.mp4"      
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-              poster="/videos/herovideo.mp4"
-            >
-              Sorry, your browser does not support embedded videos.
-            </video>
-          </div>
+        <div className="absolute inset-0 opacity-30">
+          <video
+            src="/videos/herovideo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+            poster="/videos/herovideo.mp4"
+          >
+            Sorry, your browser does not support embedded videos.
+          </video>
+        </div>
         <div className="relative container py-24 md:py-36">
           <div className="max-w-2xl animate-fade-in-up">
             <h1 className="font-display text-4xl md:text-6xl leading-tight mb-6">
@@ -146,7 +121,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Trust Block */}
       <section className="py-16 md:py-20 bg-card" aria-label="Why Choose Us">
         <div className="container">
@@ -167,7 +141,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Services Preview */}
       <section className="py-16 md:py-24" aria-label="Our Services">
         <div className="container">
@@ -200,7 +173,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* How it Works */}
       <section className="py-16 md:py-24 bg-card" aria-label="How It Works">
         <div className="container">
@@ -226,7 +198,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-16 md:py-24" aria-label="Testimonials">
         <div className="container">
@@ -246,11 +217,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Image Banner */}
       <section className="relative h-64 md:h-80 overflow-hidden" aria-label="Join the Family">
         <img src="/images/cousinsinside.png" alt="Happy dogs in a home" className="w-full h-full object-cover" style={{ objectFit: 'cover', width: '100%', height: '100%' }} loading="lazy" decoding="async" />
-
         <div className="absolute inset-0 bg-primary/60 flex items-center justify-center">
           <div className="text-center text-primary-foreground">
             <h2 className="font-display text-3xl md:text-4xl mb-4">Ready to join the family?</h2>
@@ -266,6 +235,4 @@ const Index = () => {
       </section>
     </>
   );
-};
-
-export default Index;
+}

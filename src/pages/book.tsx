@@ -1,20 +1,17 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Calendar, FileText, Shield, Clock, ArrowRight } from "lucide-react";
-// Image import removed; use string path for public image
 
-const Book = () => (
-  <>
+export default function Book() {
+  return (
     <section className="py-20 md:py-28">
       <div className="container max-w-3xl">
         <div className="text-center mb-12">
-          <img src="/images/cousin-haven-logo-brown.png" alt="Cousin Haven" className="h-10 mx-auto mb-4 opacity-70" height={40} width={68} loading="lazy" decoding="async" style={{ color: 'transparent' }}  />
+          <img src="/images/cousin-haven-logo-brown.png" alt="Cousin Haven" className="h-10 mx-auto mb-4 opacity-70" height={40} width={68} loading="lazy" decoding="async" style={{ color: 'transparent' }} />
           <h1 className="font-display text-4xl md:text-5xl mb-4">Book Your Visit</h1>
           <p className="font-body text-muted-foreground text-lg">
             Follow these steps to get started with Cousin Haven.
           </p>
         </div>
-
         <div className="space-y-8">
           {/* Step 1 */}
           <div className="rounded-2xl bg-card border p-8">
@@ -35,11 +32,9 @@ const Book = () => (
                 >
                   Book on Calendly <ArrowRight size={16} />
                 </a>
-                
               </div>
             </div>
           </div>
-
           {/* Step 2 */}
           <div className="rounded-2xl bg-card border p-8">
             <div className="flex items-start gap-4">
@@ -62,13 +57,12 @@ const Book = () => (
                     href="/polices"
                     className="inline-flex items-center gap-2 font-subhead text-sm px-5 py-2.5 rounded-full border border-primary text-primary hover:bg-primary/5 transition-colors"
                   >
-                    Read Policies
+                    View Policies
                   </Link>
                 </div>
               </div>
             </div>
           </div>
-
           {/* Step 3 */}
           <div className="rounded-2xl bg-card border p-8">
             <div className="flex items-start gap-4">
@@ -76,17 +70,13 @@ const Book = () => (
                 <Shield className="text-primary" size={22} />
               </div>
               <div>
-                <h2 className="font-subhead text-xl mb-2">Step 3: Send Vaccination Records</h2>
+                <h2 className="font-subhead text-xl mb-2">Step 3: Send Vaccine Records</h2>
                 <p className="font-body text-sm text-muted-foreground mb-4">
-                  Send your dog's up-to-date vaccination records via text or email. Records are required before we can confirm your booking.
-                </p>
-                <p className="font-body text-xs text-muted-foreground">
-                  📱 Text/WhatsApp or 📧 Email — details provided after your Meet & Greet.
+                  Email your pup’s up-to-date vaccine records to <a href="mailto:booking@niamatos.com" className="text-primary underline">booking@niamatos.com</a> before your first visit.
                 </p>
               </div>
             </div>
           </div>
-
           {/* Step 4 */}
           <div className="rounded-2xl bg-card border p-8">
             <div className="flex items-start gap-4">
@@ -94,22 +84,15 @@ const Book = () => (
                 <Clock className="text-primary" size={22} />
               </div>
               <div>
-                <h2 className="font-subhead text-xl mb-2">Late Pickup Rules</h2>
-                <p className="font-body text-sm text-muted-foreground mb-2">
-                  Regular hours: <strong>6am – 6pm</strong>
+                <h2 className="font-subhead text-xl mb-2">Step 4: Confirm Your Booking</h2>
+                <p className="font-body text-sm text-muted-foreground mb-4">
+                  Once all steps are complete, we’ll confirm your booking and send you all the details for your pup’s stay!
                 </p>
-                <ul className="font-body text-sm text-muted-foreground space-y-1 list-disc list-inside">
-                  <li>Late pickup by approval only, up to 10pm</li>
-                  <li>Fees: $20 boarding / $25 daycare</li>
-                  <li>Strict cutoff: no pickups after 10pm</li>
-                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </>
-);
-
-export default Book;
+  );
+}
