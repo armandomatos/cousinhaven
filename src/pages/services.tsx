@@ -44,11 +44,11 @@ const services = [
   },
 ];
 const serviceImages: Record<string, string> = {
-  Boarding: "/images/boarding-trans.png",
-  Daycare: "/images/daycare-trans.png",
-  "Half Day": "/images/halfday-trans.png",
-  Transport: "/images/transport-trans.png",
-  BathBrush: "/images/bathbrush-trans.png",
+  Boarding: "/images/boarding.png",
+  Daycare: "/images/daycare.png",
+  "Half Day": "/images/halfday.png",
+  Transport: "/images/transport.png",
+  BathBrush: "/images/bathbrush.png",
 };
 
 export default function Services() {
