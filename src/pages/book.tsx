@@ -54,7 +54,7 @@ export default function Book() {
                     Sign Client Agreement
                   </Link>
                   <Link
-                    href="/polices"
+                    href="/policies"
                     className="inline-flex items-center gap-2 font-subhead text-sm px-5 py-2.5 rounded-full border border-primary text-primary hover:bg-primary/5 transition-colors"
                   >
                     View Policies
