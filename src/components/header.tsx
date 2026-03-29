@@ -48,7 +48,7 @@ export default function Header() {
               href="/book"
               className="font-subhead text-sm px-5 py-2 rounded-full bg-primary text-primary-foreground hover:opacity-90 transition-opacity shadow-warm"
             >
-              Book a Meet & Greet
+              Book a Free Meet & Greet
             </NavLink>
         </nav>
         {/* Mobile toggle */}

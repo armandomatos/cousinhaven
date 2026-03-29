@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { Heart, Home, Shield, Star, ArrowRight } from "lucide-react";
+import WhyDogsFeelAtHome from "@/components/WhyDogsFeelAtHome";
+import HomeFAQ from "@/components/HomeFAQ";
+import BalancedDay from "@/components/BalancedDay";
 
 const services = [
   {
@@ -102,14 +105,14 @@ export default function Index() {
               Home-style dog boarding & daycare in Port St. Lucie
             </h1>
             <p className="font-body text-lg md:text-xl opacity-90 mb-8 leading-relaxed">
-              Small groups. Supervised play. A real home — not a kennel. Your dog deserves family-style care.
+             Small groups, supervised play, rest, social balance, and enrichment in a real home — not a kennel.
             </p>
             <nav aria-label="Primary call to action" className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/book"
                 className="inline-flex items-center justify-center gap-2 font-subhead px-8 py-4 rounded-full bg-secondary text-secondary-foreground shadow-gold hover:scale-105 transition-transform text-lg"
               >
-                Book a Meet & Greet <ArrowRight size={20} />
+                Book a Free Meet & Greet <ArrowRight size={20} />
               </Link>
               <Link
                 href="/ebook"
@@ -126,9 +129,9 @@ export default function Index() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <Home size={28} />, title: "Home Environment", desc: "No cold kennels — just a warm, cozy home where your dog feels safe." },
-              { icon: <Shield size={28} />, title: "Fully Supervised", desc: "Your pup is never left alone. Constant care and attention guaranteed." },
-              { icon: <Heart size={28} />, title: "Small Groups", desc: "Limited spots to ensure every dog gets the love and focus they deserve." },
+              { icon: <Home size={28} />, title: "A Real Home Environment", desc: "No cold kennels or crowded rooms. Dogs stay in a calm home setting with space to move, settle, explore, and feel safe." },
+              { icon: <Shield size={28} />, title: "Fully Supervised, Thoughtfully Guided", desc: "Dogs are never left to “figure it out alone.” Play, rest, and social interaction are monitored to help keep the day balanced and safe." },
+              { icon: <Heart size={28} />, title: "Small Groups, Better Experience", desc: "We keep groups small so each dog gets closer supervision, more personalized attention, and a more comfortable social environment." },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center text-center p-6 rounded-2xl bg-background shadow-warm animate-fade-in-up" style={{ animationDelay: `${i * 0.15}s` }}>
                 <div className="w-14 h-14 rounded-full bg-secondary/30 flex items-center justify-center text-primary mb-4">
@@ -141,21 +144,23 @@ export default function Index() {
           </div>
         </div>
       </section>
+      {/* Balanced Day */}
+      <BalancedDay />
       {/* Services Preview */}
-      <section className="py-16 md:py-24" aria-label="Our Services">
+      <section className="py-16 md:py-24 bg-card" aria-label="Our Services">
         <div className="container">
           <div className="text-center mb-12">
             <img src="/images/cousin-haven-logo-brown.png" alt="Cousin Haven by Nia Matos logo" className="h-10 mx-auto mb-4 opacity-70" height={40} width={68} loading="lazy" decoding="async" style={{ color: 'transparent' }} />
             <h2 className="font-display text-3xl md:text-4xl mb-3">Our Services</h2>
             <p className="font-body text-muted-foreground max-w-md mx-auto">
-              Everything your pup needs, all under one roof.
+              Thoughtful, home-style services designed to support comfort, routine, play, rest, and well-being — whether your pup stays for a few hours, the full day, or overnight.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s, i) => (
               <div
                 key={i}
-                className="group p-6 rounded-2xl bg-card border hover:shadow-warm transition-all duration-300 hover:-translate-y-1"
+                className="group p-6 rounded-2xl bg-background border hover:shadow-warm transition-all duration-300 hover:-translate-y-1 "
               >
                 <img src={serviceImages[s.title]} alt={s.title + ' service icon'} className="mb-4 block h-16 service-img-mobile" height={64} width={64} loading="lazy" decoding="async" style={{ color: 'transparent' }} />
                 <h3 className="px-8  inline-flex  rounded-full font-subhead bg-primary  text-lg text-gold mb-1">{s.title}</h3>
@@ -174,7 +179,7 @@ export default function Index() {
         </div>
       </section>
       {/* How it Works */}
-      <section className="py-16 md:py-24 bg-card" aria-label="How It Works">
+      <section className="py-16 md:py-24 " aria-label="How It Works">
         <div className="container">
           <h2 className="font-display text-3xl md:text-4xl text-center mb-12">How It Works</h2>
           <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto" aria-label="Steps to book">
@@ -198,6 +203,11 @@ export default function Index() {
           </div>
         </div>
       </section>
+      {/* Why Dogs Feel at Home */}
+      <WhyDogsFeelAtHome />
+
+      
+
       {/* Testimonials */}
       <section className="py-16 md:py-24" aria-label="Testimonials">
         <div className="container">
@@ -217,6 +227,8 @@ export default function Index() {
           </div>
         </div>
       </section>
+      {/* FAQ */}
+      <HomeFAQ />
       {/* Image Banner */}
       <section className="relative h-64 md:h-80 overflow-hidden" aria-label="Join the Family">
         <img src="/images/cousinsinside.png" alt="Happy dogs in a home" className="w-full h-full object-cover" style={{ objectFit: 'cover', width: '100%', height: '100%' }} loading="lazy" decoding="async" />
@@ -228,7 +240,7 @@ export default function Index() {
               className="inline-flex items-center gap-2 font-subhead px-8 py-4 rounded-full bg-secondary text-secondary-foreground shadow-gold hover:scale-105 transition-transform"
               aria-label="Book a Meet & Greet"
             >
-              Book a Meet & Greet <ArrowRight size={18} />
+              Book a Free Meet & Greet <ArrowRight size={18} />
             </Link>
           </div>
         </div>

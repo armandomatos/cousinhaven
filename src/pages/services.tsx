@@ -5,40 +5,40 @@ const services = [
   {
     title: "Boarding — Slumber Paw-ty",
     subtitle: "Boarding",
-    desc: "Overnight stays where your dog sleeps in a safe, climate-controlled home with constant supervision. Includes evening walks, bedtime snuggles, and morning play.",
-    includes: ["Overnight care", "Evening & morning walks", "Meals & fresh water", "Photo updates"],
+    desc: "Overnight home-style care for dogs who deserve more than a kennel stay.\nYour pup sleeps in a safe, climate-controlled home environment with supervision, a calm routine, evening wind-down time, and a comfortable start to the next day.",
+    includes: ["Overnight home-style care", "Evening routine and morning play & morning walks", "Meals, fresh water, and rest", "Photo updates for peace of mind"],
     icon: "🌙",
     bg: "bg-rose/20",
   },
   {
     title: "Daycare — Daytail Club",
     subtitle: "Daycare",
-    desc: "Full-day supervised care from 6am to 6pm. Structured play sessions, rest time, and socialization with a small group of vetted dogs.",
-    includes: ["6am–6pm hours", "Structured play", "Rest periods", "Socialization"],
+    desc: "Full-day supervised care from 6am to 6pm in a small-group, home-style setting.\nThe day includes structured play, rest periods, guided social time, and a balanced routine that helps dogs stay engaged without becoming overwhelmed.",
+    includes: ["6am–6pm full-day care", "Structured play and rest balance", "Guided social interaction", "Small-group supervised environment"],
     icon: "☀️",
     bg: "bg-gold/20",
   },
   {
     title: "Half Day — Sniff & Go",
     subtitle: "Half Day",
-    desc: "Perfect for short workdays or errands. A few hours of supervised fun and enrichment for your pup.",
-    includes: ["Flexible hours", "Supervised play", "Great for short needs"],
+    desc: "A shorter stay for dogs who need care, movement, and support during the day without a full-day visit.\nIdeal for short workdays, errands, or younger dogs who benefit from supervised activity, calm breaks, and a change of environment.",
+    includes: ["Flexible shorter stays", "Supervised activity and calm breaks", "Great for errands or lighter coverage","Small-group home-style setting"],
     icon: "🐾",
     bg: "bg-sage/20",
   },
   {
     title: "Transport — Pup Express",
     subtitle: "Transport",
-    desc: "Safe, reliable pick-up and drop-off within the Port St. Lucie area. We come to you so your pup rides in comfort.",
-    includes: ["Local area coverage", "Safe vehicle transport", "Flexible scheduling"],
+    desc: "Safe, reliable pick-up and drop-off for clients in the Port St. Lucie area.\nPup Express makes getting to and from Cousin Haven easier, with a comfortable ride and a smoother experience for busy dog parents.",
+    includes: ["Pick-up and drop-off available", "Local Port St. Lucie coverage", "Safe, comfortable transportation","Helpful for busy schedules"],
     icon: "🚗",
     bg: "bg-peach/20",
   },
   {
     title: "Add-on — Shine & Fluff",
     subtitle: "BathBrush",
-    desc: "Bath & brush add-on available with any service. Your pup goes home looking and smelling fresh!",
-    includes: ["Bath & brush", "Available as add-on", "Fresh & clean pickup"],
+    desc: "A bath and brush add-on available with any stay, so your pup goes home fresh, clean, and photo-ready.\nPerfect for clients who want pick-up to feel easier, cleaner, and more complete.",
+    includes: ["Bath and brush add-on", "Available with any service", "Fresh, clean pick-up","Easy finishing touch before going home"],
     icon: "✨",
     bg: "bg-rose/20",
   },
@@ -71,9 +71,9 @@ export default function Services() {
         </div>
         <div className="relative container text-center">
           <img src="/images/cousin-haven-logo-brown.png" alt="Cousin Haven" className="h-12 mx-auto mb-6" width={81} height={40} loading="lazy" decoding="async" style={{ color: 'transparent' }} />
-          <h1 className="font-display text-4xl md:text-5xl mb-4">Cousin Haven Services</h1>
-          <p className="font-body font-bold text-white max-w-lg mx-auto text-lg">
-            Quality over quantity. Limited spots. Maximum love.
+          <h1 className="font-display text-4xl md:text-5xl mb-4">Small-group, home-style dog services in Port St. Lucie</h1>
+          <p className="font-body font-bold text-white mx-auto text-lg ">
+            Carefully designed with supervision, structure, and a real home environment to support comfort, play, rest, and well-being.
           </p>
         </div>
       </section>
@@ -103,14 +103,15 @@ export default function Services() {
       {/* Capacity Note + CTA */}
       <section className="py-16 bg-card">
         <div className="container text-center">
-          <p className="font-body text-muted-foreground mb-6 max-w-md mx-auto">
-            We intentionally keep our group sizes small to ensure every dog receives the attention and care they deserve.
+          <h3 className="font-display text-2xl md:text-3xl mb-4">Why small groups matter</h3>
+          <p className="font-body text-muted-foreground mb-6 max-w-xl mx-auto">
+            We intentionally keep our groups small so dogs receive closer supervision, more personalized attention, and a more comfortable social experience. That means less chaos, more guidance, and a day that feels safer and more balanced.
           </p>
           <Link
             href="/book"
             className="inline-flex items-center gap-2 font-subhead px-8 py-4 rounded-full bg-primary text-primary-foreground shadow-warm hover:scale-105 transition-transform"
           >
-            Book a Meet & Greet <ArrowRight size={18} />
+            Book a Free Meet & Greet <ArrowRight size={18} />
           </Link>
         </div>
       </section>

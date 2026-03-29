@@ -30,7 +30,7 @@ export default function Footer() {
           <h4 className="font-subhead text-lg mb-4">Quick Links</h4>
           <div className="flex flex-col gap-2 font-body text-sm opacity-80">
             <Link href="/services" className="hover:opacity-100 transition-opacity">Services</Link>
-            <Link href="/book" className="hover:opacity-100 transition-opacity">Book a Meet & Greet</Link>
+            <Link href="/book" className="hover:opacity-100 transition-opacity">Book a Free Meet & Greet</Link>
             <Link href="/agreement" className="hover:opacity-100 transition-opacity">Client Agreement</Link>
             <Link href="/polices" className="hover:opacity-100 transition-opacity">Policies</Link>
           </div>
