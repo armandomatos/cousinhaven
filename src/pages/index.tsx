@@ -8,25 +8,25 @@ const services = [
   {
     title: "Boarding",
     subtitle: "Slumber Paw-ty",
-    desc: "Overnight stays in a cozy, supervised home environment. Your pup sleeps safe and loved.",
+    desc: "Overnight home-style care with supervision, a calm evening routine, and a comfortable start to the next day.",
     icon: "🌙",
   },
   {
     title: "Daycare",
     subtitle: "Daytail Club",
-    desc: "Full-day care from 6am–6pm with structured play, rest, and socialization.",
+    desc: "Full-day supervised care with structured play, rest, and guided social time in a small-group home setting.",
     icon: "☀️",
   },
   {
     title: "Half Day",
     subtitle: "Sniff & Go",
-    desc: "Perfect for quick errands or short workdays. A few hours of supervised fun.",
+    desc: "A shorter stay with supervised activity, calm breaks, and support for dogs who do not need a full day.",
     icon: "🐾",
   },
   {
-    title: "Transport",
-    subtitle: "Pup Express",
-    desc: "Safe pick-up and drop-off within the Port St. Lucie area.",
+    title: "Bath & Brush",
+    subtitle: "Shine & Fluff",
+    desc: "A bath and brush add-on for a cleaner, fresher, and more comfortable pick-up experience.",
     icon: "🚗",
   },
 ];
@@ -34,7 +34,7 @@ const serviceImages: Record<string, string> = {
   Boarding: "/images/boarding.png",
   Daycare: "/images/daycare.png",
   "Half Day": "/images/halfday.png",
-  Transport: "/images/transport.png",
+  "Bath & Brush": "/images/bathbrush.png",
 };
 const steps = [
   { num: "1", text: "Book a Meet & Greet" },

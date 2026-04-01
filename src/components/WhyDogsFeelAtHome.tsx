@@ -68,7 +68,7 @@ const WhyDogsFeelAtHome = () => {
             href="/book"
             className="inline-flex items-center gap-2 font-subhead px-8 py-4 rounded-full bg-primary text-primary-foreground shadow-warm hover:scale-105 transition-transform"
           >
-            Book a Meet & Greet <ArrowRight size={18} />
+            Book a Free Meet & Greet <ArrowRight size={18} />
           </Link>
         </div>
       </div>

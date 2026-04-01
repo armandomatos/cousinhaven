@@ -33,6 +33,7 @@ const services = [
     includes: ["Pick-up and drop-off available", "Local Port St. Lucie coverage", "Safe, comfortable transportation","Helpful for busy schedules"],
     icon: "🚗",
     bg: "bg-peach/20",
+    paused: true,
   },
   {
     title: "Add-on — Shine & Fluff",
@@ -79,17 +80,23 @@ export default function Services() {
       </section>
       {/* Services List */}
       <section className="py-16">
-        <div className="container space-y-8">
-          {services.map((s, i) => (
-            <div key={i} className={`rounded-2xl p-8 ${s.bg} border`}>
+      <div className="container space-y-8">
+        {services.map((s, i) => (
+          <div key={i} className="relative">
+            {s.paused && (
+              <div className="absolute top-4 right-4 z-10 font-subhead text-sm px-4 py-1.5 rounded-full bg-destructive/10 text-destructive border border-destructive/20">
+                ⏸ Temporarily paused
+              </div>
+            )}
+            <div className={`rounded-2xl p-8 ${s.bg} border ${s.paused ? 'opacity-40 grayscale' : ''}`}>
               <div className="flex flex-col md:flex-row md:items-start gap-6">
-                <img src={serviceImages[s.subtitle]} alt={s.subtitle} className="service-img-mobile  mb-4 block md:h-20" loading="lazy" decoding="async" style={{ color: 'transparent' }} />
+                <span className="text-4xl">{s.icon}</span>
                 <div className="flex-1">
                   <h2 className="font-subhead text-2xl mb-2">{s.title}</h2>
                   <p className="font-body text-muted-foreground mb-4">{s.desc}</p>
                   <div className="flex flex-wrap gap-2">
                     {s.includes.map((item, j) => (
-                      <span key={j} className="font-body text-xs px-3 py-1 rounded-full bg-[color:var(--background)] border">
+                      <span key={j} className="font-body text-xs px-3 py-1 rounded-full bg-background border">
                         {item}
                       </span>
                     ))}
@@ -97,9 +104,10 @@ export default function Services() {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        ))}
+      </div>
+    </section>
       {/* Capacity Note + CTA */}
       <section className="py-16 bg-card">
         <div className="container text-center">
