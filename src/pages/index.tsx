@@ -9,24 +9,35 @@ const services = [
     title: "Boarding",
     subtitle: "Slumber Paw-ty",
     desc: "Overnight home-style care with supervision, a calm evening routine, and a comfortable start to the next day.",
+    pricing:"Starting at $55/night",
     icon: "🌙",
   },
   {
     title: "Daycare",
     subtitle: "Daytail Club",
     desc: "Full-day supervised care with structured play, rest, and guided social time in a small-group home setting.",
+    pricing:"Starting at $45/day",
     icon: "☀️",
   },
   {
     title: "Half Day",
     subtitle: "Sniff & Go",
     desc: "A shorter stay with supervised activity, calm breaks, and support for dogs who do not need a full day.",
+    pricing:"Starting at $30/day",
     icon: "🐾",
   },
   {
     title: "Bath & Brush",
     subtitle: "Shine & Fluff",
     desc: "A bath and brush add-on for a cleaner, fresher, and more comfortable pick-up experience.",
+    pricing:"Add-on — ask at booking",
+    icon: "🚗",
+  },
+    {
+    title: "Cousin Club Pass",
+    subtitle: "Cousin Club Pass",
+    desc: "Monthly daycare for regular cousins. Reserve your dog's spot, simplify your schedule, and save every month.",
+    pricing:"Starting at $245/mo — 4 tiers available",
     icon: "🚗",
   },
 ];
@@ -35,6 +46,7 @@ const serviceImages: Record<string, string> = {
   Daycare: "/images/daycare.png",
   "Half Day": "/images/halfday.png",
   "Bath & Brush": "/images/bathbrush.png",
+  "Cousin Club Pass": "/images/daypass.png",
 };
 const steps = [
   { num: "1", text: "Book a Meet & Greet" },
@@ -107,6 +119,9 @@ export default function Index() {
             <p className="font-body text-lg md:text-xl opacity-90 mb-8 leading-relaxed">
              Small groups, supervised play, rest, social balance, and enrichment in a real home — not a kennel.
             </p>
+            <p className="font-body text-lg md:text-xl opacity-90 mb-8 leading-relaxed">
+              Boarding from $55/night · Daycare from $45/day · Cousin Club Pass from $245/mo
+            </p>
             <nav aria-label="Primary call to action" className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/book"
@@ -156,7 +171,7 @@ export default function Index() {
               Thoughtful, home-style services designed to support comfort, routine, play, rest, and well-being — whether your pup stays for a few hours, the full day, or overnight.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {services.map((s, i) => (
               <div
                 key={i}
@@ -166,6 +181,7 @@ export default function Index() {
                 <h3 className="px-8  inline-flex  rounded-full font-subhead bg-primary  text-lg text-gold mb-1">{s.title}</h3>
                 <p className=" font-body font-bold text-xs mb-2">{s.subtitle}</p>
                 <p className="font-body text-sm text-muted-foreground mb-4">{s.desc}</p>
+                <p className="font-body text-sm text-muted-foreground mb-4">{s.pricing}</p>
                 <Link
                   href="/services"
                   className="font-body text-sm text-primary font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all"
